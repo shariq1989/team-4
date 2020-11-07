@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h1>Welcome to Meteor!</h1>
-    <hello/>
-    <info/>
+    <h1>Receipt Catcher</h1>
+    <upload/>
+    <display/>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello.vue'
-import Info from './components/Info.vue'
+import Upload from "./components/Upload";
+import Display from "./components/Display";
 
 export default {
   components: {
-    Hello,
-    Info,
+    Upload,
+    Display,
   },
 }
 </script>

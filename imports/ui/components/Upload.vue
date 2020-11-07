@@ -1,7 +1,7 @@
 <template>
   <div>
     <button @click="increment">Click Me</button>
-    <p>You've pressed the button {{counter}} times.</p>
+    <p>Upload receipts</p>
   </div>
 </template>
 
