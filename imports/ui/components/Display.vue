@@ -5,13 +5,17 @@
 </template>
 
 <script>
-import Links from '../../api/collections/Links'
+
+import {Receipts} from "../../api/collections/Receipts";
 
 export default {
   data() {
     return {}
   },
   methods: {},
+  getReceipts() {
+    return Receipts.find({}).fetch();
+  },
 }
 </script>
 

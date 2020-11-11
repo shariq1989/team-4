@@ -1,4 +1,4 @@
-// Tests for the behavior of the links collection
+// Tests for the behavior of the receipts collection
 //
 // https://guide.meteor.com/testing.html
 
