@@ -19,7 +19,6 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
     Meteor.publish('files.images.all', function () {
-        console.log(Receipts.find().cursor);
         return Receipts.find().cursor;
     });
 }
