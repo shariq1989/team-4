@@ -7,6 +7,7 @@
 
 <script>
 import {Receipts} from "../../api/collections/Receipts";
+
 export default {
   data() {
     return {
@@ -20,10 +21,28 @@ export default {
     }
   },
   uploadReceipt() {
-    Receipts.insert({
-      image: this.uploadedImage,
-      uploadTimestamp: new Date()
-    });
+    if (this.uploadedImage) {
+      const upload = Receipts.insert({
+        file: this.uploadedImage,
+        streams: 'dynamic',
+        chunkSize: 'dynamic'
+      }, false);
+
+      upload.on('start', function () {
+        template.currentUpload.set(this);
+      });
+
+      upload.on('end', function (error, fileObj) {
+        if (error) {
+          alert(`Error during upload: ${error}`);
+        } else {
+          alert(`File "${fileObj.name}" successfully uploaded`);
+        }
+        template.currentUpload.set(false);
+      });
+
+      upload.start();
+    }
     // Clear form
     this.uploadedImage = null;
   }
@@ -36,7 +55,8 @@ export default {
 p {
   font-family: serif;
 }
-  p {
-    font-family: serif;
-  }
+
+p {
+  font-family: serif;
+}
 </style>
