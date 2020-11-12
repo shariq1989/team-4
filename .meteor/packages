@@ -27,3 +27,4 @@ accounts-password
 vuejs:blaze-integration
 jquery
 ostrio:files
+npm-bcrypt

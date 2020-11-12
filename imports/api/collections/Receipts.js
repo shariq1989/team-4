@@ -7,9 +7,10 @@ export const Receipts = new FilesCollection({
     onBeforeUpload: function (file) {
         // Allow upload files under 10MB, and only in png/jpg/jpeg formats
         if (file.size <= 1024 * 1024 * 10 && /png|jpe?g/i.test(file.extension)) {
+            file.uploadDate = new Date();
             return true;
         }
-        return 'Please upload image, with size equal or less than 10MB';
+        return 'Please upload an image, with size equal or less than 10MB';
     }
 });
 if (Meteor.isClient) {
@@ -18,6 +19,7 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
     Meteor.publish('files.images.all', function () {
+        console.log(Receipts.find().cursor);
         return Receipts.find().cursor;
     });
 }
