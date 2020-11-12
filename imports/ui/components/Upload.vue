@@ -1,7 +1,13 @@
-<template>
-  <div>
-    <button @click="increment">Click Me</button>
-    <p>Upload receipts</p>
+<template name="uploadForm">
+  <div id="app">
+    <div v-if="!image">
+      <h2>Select a receipt</h2>
+      <input type="file" @change="onFileChange">
+    </div>
+    <div v-else>
+      <img :src="image"/>
+      <button @click="removeImage">Remove image</button>
+    </div>
   </div>
 </template>
 
@@ -29,7 +35,8 @@ export default {
       }, false);
 
       upload.on('start', function () {
-        template.currentUpload.set(this);
+        //TODO: Sets upload progress
+        //template.currentUpload.set(this);
       });
 
       upload.on('end', function (error, fileObj) {
@@ -38,7 +45,8 @@ export default {
         } else {
           alert(`File "${fileObj.name}" successfully uploaded`);
         }
-        template.currentUpload.set(false);
+        // removes upload progress
+        //template.currentUpload.set(false);
       });
 
       upload.start();
