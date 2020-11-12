@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 import {Receipts} from "../../api/collections/Receipts";
 
 export default {

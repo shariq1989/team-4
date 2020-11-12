@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Receipt Catcher</h1>
+    <blaze-template template="loginButtons" tag="span"></blaze-template>
     <upload/>
     <display/>
   </div>

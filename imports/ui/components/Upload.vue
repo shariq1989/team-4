@@ -6,9 +6,7 @@
 </template>
 
 <script>
-
 import {Receipts} from "../../api/collections/Receipts";
-
 export default {
   data() {
     return {
@@ -38,4 +36,7 @@ export default {
 p {
   font-family: serif;
 }
+  p {
+    font-family: serif;
+  }
 </style>
