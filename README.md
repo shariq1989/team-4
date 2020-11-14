@@ -111,3 +111,67 @@ scrum as shown in the Zoom participant list below.
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/daily_scrum1.png" width="250"
  alt="daily_scrum1.png">
 
+#### What did you do?
+##### 11/6
+
+Diah - I shared this Google Document with the rest of the team members.  I created a recurrence meeting on Zoom to host Daily Scrum meetings moving forward.  I started a HTML and CSS file for the simple UI story to upload pictures..
+
+Remi - set up MongoDB instance and provided team members with access to it
+
+Rick - provided Remi with IP address and asked Richard questions about tracking development tasks.
+
+William - worked on configuring MondoDB
+
+Davey - worked on configuring MongoDB instance to our Meteor backend 
+
+##### 11/9
+
+The team today talked about when and who should move completed stories to the Done column.  As a team, we agreed that each assignee should be the one to do that.
+
+Diah - Since our last meeting, I tested the connection to MongoDB.  I plan to confirm with other members of the team about our stories to make sure we’re not duplicating any work.  Then, I plan to continue to work on my story.  I had a blocker about cloning the repo and this blocker was addressed during the daily scrum today.
+
+Remi - Got confirmation of database access - completing story for database configuration. Started researching OCR for next sprint.
+
+Rick - confirmed DB access, reviewed Davey’s PRs, got set up with project, updated README with HW prompts, replaced sample code with receipt upload code
+
+William - Got node, meteor, and webstorm installed. Repository cloned into git. Trying to run project
+
+Davey - Implemented user authentication and got the code reviewed/merged. 
+
+#### What will you do next?
+##### 11/6
+Diah - will create a simple picture upload page
+
+Remi - will work on the functionality to extract data from receipts
+
+Rick - will work on writing the backend functionality for uploading images
+
+William - will work on implementing the data table for displaying picture upload information  
+
+Davey - will work on implementing user authentication
+
+##### 11/9
+Diah - will work on ui for receipt upload
+
+Remi - will work on functionality to extract data from receipts
+
+Rick - complete receipt upload backend functionality, keep adding to README 
+
+William - will work on implementing the data table for displaying picture upload information 
+
+Davey - User auth is now implemented and seems to be working fine. We may want to write our own UI for the forms after we develop the app’s final UI presentation.
+
+#### Impediments
+We did not see any impediments that would keep us from meeting the Sprint Goal. We did not develop an impediment removal plan since we did not log any impediments. 
+
+#### Activity
+Evidence of us updating our task board
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/activity.png" width="250"
+ alt="activity.png">
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/activity2.png" width="250"
+  alt="activity2.png">
+  
+#### Sprint Review
+Our stakeholder Tressa Jamil attended as evidenced by the Zoom participant list
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.png" width="250"
+  alt="review.png">
