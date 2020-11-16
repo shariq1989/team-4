@@ -30,6 +30,7 @@ export default {
         return;
       if (e.currentTarget.files && e.currentTarget.files[0]) {
         let file = e.currentTarget.files[0];
+        console.log(file);
         this.uploadReceipt(file)
       }
       this.displayImage(files[0]);
