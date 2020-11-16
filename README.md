@@ -204,3 +204,10 @@ The current product backlog already covers the first request, and we added the s
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/review.PNG" width="500"
   alt="review.png">
+
+#### Product Increment
+A screenshot of the upload and user authentication functionalities of the app working.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/increment.png" width="300"
+  alt="increment.png">
+
