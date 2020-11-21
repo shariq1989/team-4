@@ -3,7 +3,17 @@
     <!-- Upload receipt form -->
     <div v-if="!image">
       <h2>Select an image</h2>
-      <input type="file" @change="onFileChange">
+      <div id="ReceiptForm">
+        <form>
+          <input type="file"></br>
+          <input type="text" id="Store" value="Store Name"></br>
+          Date of Purchase: <input type="date" id="Date"></br>
+          <input type="text" id="Total" value="Total Spent"></br>
+          <input type="text" id="Category" value="Category"></br>
+          <input type="submit" value="Submit">
+          <!-- <input type="file" @change="onFileChange"> Saved for posterity-->
+        </form>
+      </div>
     </div>
     <!-- Displayed after upload complete -->
     <div v-else>
@@ -68,6 +78,9 @@ export default {
         // removes upload progress
         //template.currentUpload.set(false);
       });
+      //
+      // Add Confirmation page, if yes -> upload, else -> back to main page
+      //
       upload.start();
       // Clear form
       this.image = null;
