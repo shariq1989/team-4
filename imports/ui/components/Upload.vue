@@ -5,7 +5,7 @@
       <h2>Select an image</h2>
       <div id="ReceiptForm">
         <form @submit="formSubmit">
-          <input type="file"></br>
+          <input id="file" type="file"></br>
           <input type="text" id="Store" value="Store Name"></br>
           Date of Purchase: <input type="date" id="Date"></br>
           <input type="text" id="Total" value="Total Spent"></br>
@@ -35,8 +35,24 @@ export default {
   },
   methods: {
     formSubmit(e){
-      let files = e.target
-      console.log(files);
+      e.preventDefault();
+      //get values from form
+      const Store = e.target.Store.value;
+      const Total = e.target.Total.value;
+      const Date = e.target.Date.value;
+      const Category = e.target.Category.value;
+      let file = e.target.file.value;
+
+      //Create JSON object
+      data = {
+        "Store": Store,
+        "Total": Total,
+        "Date": Date,
+        "Category": Category,
+        "file": file,
+      };
+      console.log(data); //Confirm form data
+
     },
 
     onFileChange(e) {
@@ -83,9 +99,6 @@ export default {
         // removes upload progress
         //template.currentUpload.set(false);
       });
-      //
-      // Add Confirmation page, if yes -> upload, else -> back to main page
-      //
       upload.start();
       // Clear form
       this.image = null;
