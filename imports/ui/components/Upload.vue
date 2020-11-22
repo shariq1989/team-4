@@ -5,7 +5,7 @@
       <h2>Select an image</h2>
       <div id="ReceiptForm">
         <form @submit="formSubmit">
-          <input id="file" type="file"></br>
+          <input id="file" type="file" ></br>
           <input type="text" id="Store" value="Store Name"></br>
           Date of Purchase: <input type="date" id="Date"></br>
           <input type="text" id="Total" value="Total Spent"></br>
@@ -41,8 +41,7 @@ export default {
       const Total = e.target.Total.value;
       const Date = e.target.Date.value;
       const Category = e.target.Category.value;
-      let file = e.target.file.value;
-
+      let file = e.target.file.files[0];
       //Create JSON object
       data = {
         "Store": Store,
@@ -51,8 +50,9 @@ export default {
         "Category": Category,
         "file": file,
       };
-      console.log(data); //Confirm form data
-
+      //console.log(data); //Confirm form data
+      // Submit to database
+      this.uploadReceipt(data);
     },
 
     onFileChange(e) {
@@ -67,7 +67,11 @@ export default {
       this.displayImage(files[0]);
     },
 
-    displayImage(file) {
+    displayImage(e) {
+      console.log(e);
+      let fileObjToSubmit = e.currentTarget.files[0];
+      console.log(e.currentTarget.files[0]);
+      return fileObjToSubmit;
       const reader = new FileReader();
       const vm = this;
 
@@ -76,12 +80,21 @@ export default {
       };
       reader.readAsDataURL(file);
     },
+
     uploadAnotherReceipt: function () {
       this.image = null;
     },
-    uploadReceipt(image) {
+    uploadReceipt(obj) {
+      image = obj.file;
+      console.log(image);
       let upload = Receipts.insert({
         file: image,
+        meta: {
+          "category": obj.Category,
+          "date": obj.Date,
+          "storeName": obj.Store,
+          "totalSpent": obj.Total,
+        },
         streams: 'dynamic',
         chunkSize: 'dynamic',
       }, false);
