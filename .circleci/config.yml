@@ -23,4 +23,4 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
-      - run: sudo npm install -g mup && cd .deploy && mup deploy
+      - run: curl https://install.meteor.com/ | sh && sudo npm install -g mup && cd .deploy && mup setup && mup deploy
