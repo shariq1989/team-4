@@ -30,17 +30,17 @@ describe("receipt-catcher", function () {
         const file = Receipts.load("https://raw.githubusercontent.com/VeliovGroup/Meteor-Files/master/logo.png", {
             fileName: 'receipt.png'
         });
-        console.log(file)
+        //console.log(file)
     });
     it("upload another", async function () {
         let image = 'not null';
-        console.log(this.image);
+        //console.log(this.image);
         //Upload.uploadAnotherReceipt();
         //assert.equal(this.image, null);
     });
     it("receipts exists", async function () {
         const recs = Receipts.find()
-        console.log(recs.count())
+        //console.log(recs.count())
         //assert.equal(Receipts.find().count(), 3);
     });
 });
