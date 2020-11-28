@@ -1,6 +1,16 @@
 version: 2.1
 orbs:
   node: circleci/node@3.0.0
+workflows:
+  node-tests:
+    jobs:
+      - server_tests
+      - deploy:
+          requires:
+            - server_tests  # Only run deploy job once this job has completed
+          #filters:
+          #  branches:
+          #    only: main # Only deploy when the commit is on the main branch
 jobs:
   server_tests:
     docker:
@@ -8,7 +18,9 @@ jobs:
     steps:
       - checkout
       - run: curl https://install.meteor.com/ | sh && cd server && npm install && npm test
-workflows:
-  node-tests:
-    jobs:
-      - server_tests
+  deploy:
+    docker:
+      - image: circleci/node:8-browsers
+    steps:
+      - checkout
+      - run: cd server/.deploy && mup deploy
