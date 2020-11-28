@@ -23,4 +23,4 @@ jobs:
       - image: circleci/node:8-browsers
     steps:
       - checkout
-      - run: cd .deploy && mup deploy
+      - run: npm install -g mup && cd .deploy && mup deploy
