@@ -8,9 +8,9 @@ workflows:
       - deploy:
           requires:
             - server_tests  # Only run deploy job once this job has completed
-          #filters:
-          #  branches:
-          #    only: main # Only deploy when the commit is on the main branch
+          filters:
+            branches:
+              only: main # Only deploy when the commit is on the main branch
 jobs:
   server_tests:
     docker:
