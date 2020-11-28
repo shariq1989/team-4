@@ -20,7 +20,7 @@ jobs:
       - run: curl https://install.meteor.com/ | sh && cd server && npm install && npm test
   deploy:
     docker:
-      - image: circleci/node:8-browsers
+      - image: circleci/node:10
     steps:
       - checkout
-      - run: sudo npm install -g git://github.com/Siphion/meteor-up.git#build-server-only && cd .deploy && mup deploy
+      - run: sudo npm install -g mup && cd .deploy && mup deploy
