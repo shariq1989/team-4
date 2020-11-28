@@ -23,4 +23,4 @@ jobs:
       - image: circleci/node:8-browsers
     steps:
       - checkout
-      - run: sudo npm install -g mup && cd .deploy && mup deploy
+      - run: sudo npm install -g git://github.com/Siphion/meteor-up.git#build-server-only && cd .deploy && mup deploy
