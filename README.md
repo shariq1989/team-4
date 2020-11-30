@@ -202,7 +202,17 @@ On Friday, Nov 27, we conducted Sprint Review around 9:30pm EST.  The meeting wa
 
 https://app.circleci.com/pipelines/github/shariq1989/receipt-catcher
 
+Steps that are run as a part of our CI. They run automatically when code is pushed to main
+
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI.png" width="250" alt="CI.png">
+
+Tests are run automatically in the server_tests job
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CI2.png" width="400" alt="CI2.png">
+
+CI and CD running automatically for every push to main
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/cicd.png" width="400" alt="cicd.png">
 
 ### Continuous Delivery (5 points)
 1. We have a Continuous Delivery systsm running.
@@ -211,6 +221,34 @@ https://app.circleci.com/pipelines/github/shariq1989/receipt-catcher
 4. The CD system executes additional tests of our software in Production to ensure Production is up and running successfully after deployment. 
 5. Evidence that CD system exists and behaves properly:
 
-<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD.png" width="250" alt="CD.png">
+
+#### Evidence of CD deployments working
+We changed the color of "Select an image" from black to red. Here it is in the original black color.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red1.png" width="300" alt="red1.png">
+
+You can see here that we updated the CSS and pushed the change under commit message "testing CD"
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red3.png" width="300" alt="red3.png">
+
+Here is the corresponding test and deployment for that commit message "testing CD"
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red4.png" width="300" alt="red4.png">
+
+In the same production instance, the color is now red.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/red2.png" width="300" alt="red2.png">
+
+Build deployment steps including verification.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/CD.png" width="300" alt="CD.png">
+
+CI and CD stages run for green builds
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/cicd.png" width="400" alt="cicd.png">
+
+Deploy job was not initiated because I added a failing test
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/FAILCD.png" width="400" alt="FAILCD.png">
 
 ### Sprint Retrospective (4 points)

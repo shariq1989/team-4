@@ -112,7 +112,9 @@ img {
   display: block;
   margin: auto auto 10px;
 }
-
+h2 {
+  color:red;
+}
 p {
   font-family: serif;
 }

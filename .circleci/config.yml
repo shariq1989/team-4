@@ -4,7 +4,10 @@ orbs:
 workflows:
   test-deploy:
     jobs:
-      - server_tests
+      - server_tests:
+          filters:
+            branches:
+              only: main # Only run CI on main
       - deploy:
           requires:
             - server_tests  # Only run deploy job once this job has completed
