@@ -4,6 +4,7 @@ import {Receipts} from "../imports/api/collections/Receipts";
 import {FilesCollection} from "meteor/ostrio:files";
 import Upload from "../imports/ui/components/Upload";
 
+
 describe("receipt-catcher", function () {
     it("package.json has correct name", async function () {
         const {name} = await import("../package.json");
@@ -19,7 +20,6 @@ describe("receipt-catcher", function () {
         it("server is not client", function () {
             assert.strictEqual(Meteor.isClient, false);
         });
-
     }
     it("request collection exists", async function () {
         let collection = null;
