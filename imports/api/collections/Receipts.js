@@ -14,11 +14,11 @@ export const Receipts = new FilesCollection({
     }
 });
 if (Meteor.isClient) {
-    Meteor.subscribe('files.images.all');
+    Meteor.subscribe('files.receipts.all');
 }
 
 if (Meteor.isServer) {
-    Meteor.publish('files.images.all', function () {
+    Meteor.publish('files.receipts.all', function () {
         return Receipts.find().cursor;
     });
 }

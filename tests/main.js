@@ -26,21 +26,52 @@ describe("receipt-catcher", function () {
         collection = Receipts.collection;
         assert(collection !== null);
     });
-    it("insert receipt", async function () {
-        const file = Receipts.load("https://raw.githubusercontent.com/VeliovGroup/Meteor-Files/master/logo.png", {
-            fileName: 'receipt.png'
+    it("insert png", async function () {
+        // Upload sample files on server's startup:
+        Receipts.load('https://raw.githubusercontent.com/VeliovGroup/Meteor-Files/master/logo.png', {
+            fileName: 'logo.png'
+        }, function (writeError, fileRef) {
+            if (writeError) {
+                throw writeError;
+            } else {
+                assert(fileRef._id !== null);
+            }
         });
-        //console.log(file)
     });
-    it("upload another", async function () {
-        let image = 'not null';
-        //console.log(this.image);
-        //Upload.uploadAnotherReceipt();
-        //assert.equal(this.image, null);
+    it("insert jpeg", async function () {
+        // Upload sample files on server's startup:
+        Receipts.load('https://image.shutterstock.com/image-vector/credit-card-icon-600w-397400254.jpg', {
+            fileName: 'jpeg img'
+        }, function (writeError, fileRef) {
+            if (writeError) {
+                throw writeError;
+            } else {
+                assert(fileRef._id !== null);
+            }
+        });
     });
-    it("receipts exists", async function () {
-        const recs = Receipts.find()
-        //console.log(recs.count())
-        //assert.equal(Receipts.find().count(), 3);
+    it("insert gif", async function () {
+        // Upload sample files on server's startup:
+        Receipts.load('https://media3.giphy.com/media/BfbUe877N4xsUhpcPc/giphy.gif?cid=ecf05e47olmz6aso6rvn28w3dy8401e7jqs2auavdfpmx0rf&rid=giphy.gif', {
+            fileName: 'gif img'
+        }, function (writeError, fileRef) {
+            if (writeError) {
+                throw writeError;
+            } else {
+                assert(fileRef._id !== null);
+            }
+        });
+    });
+    it("insert large image", async function () {
+        // Upload sample files on server's startup:
+        Receipts.load('https://upload.wikimedia.org/wikipedia/commons/4/4e/Pleiades_large.jpg', {
+            fileName: 'gif img'
+        }, function (writeError, fileRef) {
+            if (writeError) {
+                throw writeError;
+            } else {
+                assert(fileRef._id !== null);
+            }
+        });
     });
 });
