@@ -9,10 +9,13 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.11.2",
-    "@vue/test-utils": "^1.1.1",
     "bcrypt": "^5.0.0",
+    "blob": "^0.1.0",
+    "blob-util": "^2.0.2",
+    "internal": "^2.0.27",
     "jquery": "^3.5.1",
     "meteor-node-stubs": "^1.0.1",
+    "node-fetch": "^2.6.1",
     "vue": "^2.6.12",
     "vue-meteor-tracker": "^2.0.0-beta.5",
     "vue-template-compiler": "^2.6.12"
@@ -23,5 +26,19 @@
       "server": "server/main.js"
     },
     "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.1.1",
+    "vue-jest": "^3.0.7"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest"
+    }
   }
 }

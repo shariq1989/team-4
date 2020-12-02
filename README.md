@@ -155,6 +155,8 @@ On Sunday, Nov 15, the Development Team met and participated in the Sprint Plann
 
 - Will: Worked on meteor and Vue learning and playing around with the current code. 
 
+- Davey: Implemented views for logged-in/logged-out/unregistered users.
+
 ### Daily Scrum - What will you do? (5 points)
 - Rick: I will start working on integrating CI/CD for automated testing and builds
 
@@ -162,19 +164,37 @@ On Sunday, Nov 15, the Development Team met and participated in the Sprint Plann
 
 - Diah: Create slides for Sprint Review.  Continue to gather evidence to resubmit.  Continue to fill in Project Part 3 rubric.
 
+- Will: I will make small visual and logical updates to the UI to better fit the mockup.
+
+- Davey: I mentioned I’ll work on repairing my computer, which blew up.
+
 ### Daily Scrum - Any impediments? (3 points)
+There was one impediment that was brought up at the 11/24 Standup:
+- Davey: Yes, I did encounter an impediment. My impediment was a critical failure of a backup restoration process after my laptop returned from the repair shop. It caused data loss, irreversibly, to my great dismay. My plan was simply to reinstall lost programs and let go of the data that was lost, which I did.
 
 ### Update Sprint Task Board and Burndown Chart (2 points)
 Different members updated the Kanban board on different days as they progress with the assigned stories as seen in the log below:
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/daily_log.png" width="250" alt="daily_log.png">
+
+Als, as seen in the screenshots below, the Sprint Burndown Chart was updated from Nov 29 to Nov 30.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/burndown_11_29.png" width="250" alt="burndown_11_29.png">
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/burndown_11_30.png" width="250" alt="burndown_11_30.png">
  
 ### Pair- or Mob-Programming (5 points)
 On Monday, Nov 16, Diah, William, and Davey did a mob programming of the UI prototype design.  Diah was sharing her screen and was acting as the Driver while William and Davey were acting as the Navigators.  After the meeting was over, we shared the results of the prototype in the Slack channel for the rest of the team members to see. 
 
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/mob_11_16.png" width="250" alt="mob_11_16.png">
 
+On Sunday, Nov 29, starting around 9:40pm, Remi, Rick, William, and Diah participated in a mob-programming activity.  Remi was acting as the Driver while the rest of the participants acted as Navigators.  The team was testing the CD, where the team changed a color of an h2 element to Red and it worked.
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/mob_11_29.png" width="250" alt="mob_11_29.png">
+
 ### Test-Driven Development (10 points)
+We added new tests to ensure that images of different extensions and sizes can be uploaded using Meteor-Files
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/tests.png" width="250" alt="tests.png">
 
 ### Sprint Review (1 point)
 On Friday, Nov 27, we conducted Sprint Review around 9:30pm EST.  The meeting was recorded and the recording has been shared to Richard at richard@kasperowski and Anu at anupreet.saini@gmail.com.  The direct link is here:https://drive.google.com/file/d/1iAYzKZvlIJXppTKp6OgISdEkDTe1FeuP/view?usp=sharing
@@ -215,7 +235,7 @@ CI and CD running automatically for every push to main
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/cicd.png" width="400" alt="cicd.png">
 
 ### Continuous Delivery (5 points)
-1. We have a Continuous Delivery systsm running.
+1. We have a Continuous Delivery system running.
 2. When the build is "green", the CD system deploys our software to production environment ("Production"); 
 3. when the build is "red", the CD doesn't alter Production. 
 4. The CD system executes additional tests of our software in Production to ensure Production is up and running successfully after deployment. 
@@ -252,3 +272,9 @@ Deploy job was not initiated because I added a failing test
 <img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/FAILCD.png" width="400" alt="FAILCD.png">
 
 ### Sprint Retrospective (4 points)
+1. On Sunday, Nov 29, all members of the Development Team met to conduct a Sprint Review.
+2. The participants were asked to pick a color for a sticky note. As seen on the Miro screenshot, the color legend is on the right side of the Retrospective Wall.
+3. The team identified a room for improvement, which is around more mob- and pair-programming activity is needed especially around TDD for the next sprint.
+4. To accomplish that plan, the team agreed to participate in mob- or pair-programming session right after every Daily Scrum throughout the course of the next sprint.  
+
+<img src="https://github.com/shariq1989/receipt-catcher/blob/main/readme/retro_sprint2.png" width="400" alt="retro_sprint2.png">
