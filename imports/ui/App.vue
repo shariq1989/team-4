@@ -5,7 +5,7 @@
     <template v-if="currentUser">
       <upload/>
       <display/>
-    </template>>
+    </template>
   </div>
 </template>
 
